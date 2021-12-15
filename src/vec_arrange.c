@@ -6,7 +6,7 @@
 /*   By: goosterl <goosterl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/10 10:34:45 by goosterl      #+#    #+#                 */
-/*   Updated: 2021/12/10 11:22:09 by goosterl      ########   odam.nl         */
+/*   Updated: 2021/12/15 10:57:54 by goosterl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_vec	arrange(const t_vec v1, const char *order)
 	t_vec		outvec;
 	uint32_t	idx;
 	size_t		len;
-	
+
 	len = ft_strlen(order);
 	if (len < 1 || len > 4)
 	{

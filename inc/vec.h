@@ -6,7 +6,7 @@
 /*   By: goosterl <goosterl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/22 14:29:33 by goosterl      #+#    #+#                 */
-/*   Updated: 2021/12/11 20:49:14 by goosterl      ########   odam.nl         */
+/*   Updated: 2021/12/15 15:44:08 by goosterl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,10 @@ typedef float		t_vec __attribute__ ((vector_size (16)));
 typedef t_vec		t_cnd4;
 typedef t_vec		t_mat[4];
 
-t_vec	vec(const int count, ...);
+t_vec	vec(const float num);
+t_vec	vec2(const float x, const float y);
+t_vec	vec3(const float x, const float y, const float z);
+t_vec	vec4(const float x, const float y, const float z, const float w);
 float	length(const t_vec vector);
 t_vec	normalize(const t_vec vector);
 t_vec	saturate(const t_vec vector);
@@ -47,6 +50,8 @@ t_vec	vtan(const t_vec vector);
 t_vec	vasin(const t_vec vector);
 t_vec	vacos(const t_vec vector);
 t_vec	vatan(const t_vec vector);
+t_vec	vabs(const t_vec vector);
+t_vec	vpow(const t_vec vector, const float power);
 t_vec	qrotate(const t_vec point, const t_vec axis, const float angle);
 t_vec	qmul(const t_vec q1, const t_vec q2);
 void	mat_init(t_mat mat);

@@ -6,7 +6,7 @@
 #    By: goosterl <goosterl@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/22 15:28:18 by goosterl      #+#    #+#                  #
-#    Updated: 2021/12/15 10:21:56 by goosterl      ########   odam.nl          #
+#    Updated: 2021/12/15 16:08:01 by goosterl      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRC		=	./src/gmx_init.c			\
 			./src/shader_add.c			\
 			./src/frameloop.c			\
 			./src/geometry.c			\
+			./src/render.c				\
 			\
 			./src/vec_init.c			\
 			./src/vec_clamp.c			\
@@ -39,6 +40,8 @@ SRC		=	./src/gmx_init.c			\
 			./src/vec_trig.c			\
 			./src/vec_trigarc.c			\
 			./src/vec_mod.c				\
+			./src/vec_abs.c				\
+			./src/vec_power.c			\
 			./src/math_min_max.c		\
 			./src/math_clamp.c			\
 			./src/math_smoothstep.c		\

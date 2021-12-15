@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   vec_normalize.c                                    :+:    :+:            */
+/*   vec_abs.c                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: goosterl <goosterl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/11/23 14:20:46 by goosterl      #+#    #+#                 */
-/*   Updated: 2021/12/15 12:04:45 by goosterl      ########   odam.nl         */
+/*   Created: 2021/12/15 15:26:37 by goosterl      #+#    #+#                 */
+/*   Updated: 2021/12/15 15:27:32 by goosterl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <vec.h>
-#include <gmmath.h>
+#include <math.h>
 
-t_vec	normalize(const t_vec vector)
+t_vec	vabs(const t_vec vector)
 {
-	return (vector / length(vector));
+	return ((t_vec){
+		fabs(vector[X]),
+		fabs(vector[Y]),
+		fabs(vector[Z]),
+		fabs(vector[W])
+	});
 }

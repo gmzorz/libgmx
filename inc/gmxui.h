@@ -6,7 +6,7 @@
 /*   By: goosterl <goosterl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/22 14:53:39 by goosterl      #+#    #+#                 */
-/*   Updated: 2021/12/10 13:43:52 by goosterl      ########   odam.nl         */
+/*   Updated: 2021/12/15 16:28:18 by goosterl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,9 @@ typedef struct s_fragment
 	t_vec			coord;
 	t_vec			color;
 	float			width;
+	float			width2;
 	float			height;
+	float			height2;
 	float			time;
 	void			*geometry;
 	HRESULT			(*sampler)(const char *, int32_t, int32_t);
@@ -98,6 +100,10 @@ typedef struct s_gmx
 	t_shadersrc		*shaders;
 	t_image			*buffers;
 	t_geosrc		*geometry;
+	t_mat			worldmatrix;
+	t_mat			viewmatrix;
+	t_mouseflag		mflags;
+	bool			anti_alias;
 }	t_gmx;
 
 HRESULT		gmx_init(

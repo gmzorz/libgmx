@@ -1,17 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   event.h                                            :+:    :+:            */
+/*   xevent.h                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: goosterl <goosterl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/22 17:04:42 by goosterl      #+#    #+#                 */
-/*   Updated: 2021/11/23 11:06:14 by goosterl      ########   odam.nl         */
+/*   Updated: 2021/12/15 13:30:14 by goosterl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef EVENT_H
 # define EVENT_H
+# define EXIT_WINDOW	17
+# define MASK_BUTTON	0L
+# define KEY_DOWN		2
+# define KEY_UP			3
+# define MOUSE_DOWN		4
+# define MOUSE_UP		5
+# define MOTION			6
+
+typedef enum e_mouseflag
+{
+	MOUSE_HIDE		= 0x000,
+	MOUSE_SHOW		= 0x001,
+	MOUSE_LOCK		= 0x100,
+	MOUSE_FREE		= 0x200
+}	t_mouseflag;
 
 typedef enum e_xevent
 {
@@ -59,6 +74,13 @@ typedef enum e_mousebutton
 	MOUSE5		= 0x5,
 	MOUSE_NONE	= 0xFFFFFFFF
 }	t_mousebutton;
+
+typedef struct s_mouse_selector
+{
+	t_mousebutton			button;
+	void					(*press)(int32_t x, int32_t y);
+	struct s_mouse_selector	*next;
+}	t_mouse_selector;
 
 typedef enum e_keybutton
 {

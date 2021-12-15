@@ -6,7 +6,7 @@
 /*   By: goosterl <goosterl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/23 14:42:28 by goosterl      #+#    #+#                 */
-/*   Updated: 2021/12/09 16:58:58 by goosterl      ########   odam.nl         */
+/*   Updated: 2021/12/15 10:56:18 by goosterl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ HRESULT	gmx_init(
 			(int *)&new->image.bpp, &new->image.pitch, &new->image.endian);
 	new->image.width = width;
 	new->image.height = height;
-	new->framebuffer = (t_framebuffer)ft_calloc(1, sizeof(t_vec)\
+	new->framebuffer = (t_framebuffer)ft_calloc(1, sizeof(t_vec) \
 		* new->image.width * new->image.height);
 	if (new->framebuffer == NULL)
 	{
